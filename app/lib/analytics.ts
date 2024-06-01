@@ -2,7 +2,12 @@
 import ReactGA from "react-ga4";
 
 export const initGA = () => {
-  ReactGA.initialize("G-XXXXXXXXXX"); // Substitua pelo seu ID de rastreamento do GA4
+  const trackingId = process.env.NEXT_PUBLIC_GA_ID;
+  if (trackingId) {
+    ReactGA.initialize(trackingId);
+  } else {
+    console.error("Google Analytics tracking ID is missing");
+  }
 };
 
 export const logPageView = () => {
