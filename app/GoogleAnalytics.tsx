@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { initGA, logPageView } from "./lib/analytics";
 
-const GoogleAnalytics = () => {
+const GoogleAnalytics: React.FC = () => {
   const pathname = usePathname();
 
   useEffect(() => {
