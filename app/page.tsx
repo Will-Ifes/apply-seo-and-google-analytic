@@ -3,7 +3,7 @@ import GoogleAnalytics from "./GoogleAnalytics";
 
 const HomePage: React.FC = () => {
   return (
-    <div>
+    <>
       <GoogleAnalytics />
       <header>
         <h1>Welcome to my Next.js app</h1>
@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
       <footer>
         <p>&copy; 2024 My Next.js App. All rights reserved.</p>
       </footer>
-    </div>
+    </>
   );
 };
 

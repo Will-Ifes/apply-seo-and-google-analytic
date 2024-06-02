@@ -1,12 +1,12 @@
 import React from "react";
 import { render, screen, cleanup } from "@testing-library/react";
-import HomePage from "../page";
+import HomePage from "../../page";
 import "@testing-library/jest-dom/jest-globals";
 import "@testing-library/jest-dom";
-import { initGA, logPageView } from "../lib/analytics";
+import { initGA, logPageView } from "../../lib/analytics";
 import { jest } from "@jest/globals";
 
-jest.mock("../lib/analytics");
+jest.mock("../../lib/analytics");
 
 describe("HomePage", () => {
   beforeEach(() => {
