@@ -18,7 +18,9 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
           layout="fill"
           objectFit="cover"
           className="rounded-lg"
-          priority={true}
+          priority
+          fetchPriority="high" // Definindo a prioridade alta de fetch
+          decoding="async" // Decodificação assíncrona
         />
       </div>
       <h2 className="text-lg font-bold mb-2">{product.title}</h2>

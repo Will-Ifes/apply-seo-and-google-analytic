@@ -1,6 +1,11 @@
 import React, { ReactNode } from "react";
-import GoogleAnalytics from "./GoogleAnalytics";
+import dynamic from "next/dynamic";
 import "./styles/globals.css";
+
+// Carregamento dinâmico do GoogleAnalytics
+const GoogleAnalytics = dynamic(() => import("./GoogleAnalytics"), {
+  ssr: false,
+});
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -14,6 +19,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           content="palavras-chave, relacionadas, ao, conteúdo"
         />
         <title>E-Commerce</title>
+        <link
+          rel="preload"
+          href="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+          as="image"
+        />
       </head>
       <body className="bg-gray-100 text-gray-900">
         {children}
