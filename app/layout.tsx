@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import GoogleAnalytics from "./GoogleAnalytics";
+import "./styles/globals.css";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -14,8 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
         <title>E-Commerce</title>
       </head>
-
-      <body>
+      <body className="bg-gray-100 text-gray-900">
         {children}
         <GoogleAnalytics />
       </body>

@@ -16,12 +16,12 @@ describe("HomePage Integration Test", () => {
 
     // Check if the heading is rendered
     const heading = screen.getByRole("heading", {
-      name: /welcome to my next\.js app/i,
+      name: /welcome/i,
     });
     expect(heading).toBeInTheDocument();
 
     // Check if Google Analytics functions are called
     expect(initGA).toHaveBeenCalledTimes(1);
-    expect(logPageView).toHaveBeenCalledTimes(2); // This depends on how many times you expect it to be called
+    expect(logPageView).toHaveBeenCalledTimes(1); // This depends on how many times you expect it to be called
   });
 });

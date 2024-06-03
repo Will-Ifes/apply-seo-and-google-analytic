@@ -1,25 +1,20 @@
 import React from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ProductList from "./components/ProductList";
 import GoogleAnalytics from "./GoogleAnalytics";
 
 const HomePage: React.FC = () => {
   return (
-    <>
-      <GoogleAnalytics />
-      <header>
-        <h1>Welcome to my Next.js app</h1>
-      </header>
-      <main>
-        <section>
-          <p>
-            This is the home page of my Next.js app, built with modern web
-            technologies.
-          </p>
-        </section>
+    <div>
+      <Header />
+      <main className="container mx-auto p-4">
+        <h1 className="text-4xl font-bold mb-8 text-center">Welcome</h1>
+        <ProductList />
       </main>
-      <footer>
-        <p>&copy; 2024 My Next.js App. All rights reserved.</p>
-      </footer>
-    </>
+      <Footer />
+      <GoogleAnalytics />
+    </div>
   );
 };
 

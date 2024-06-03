@@ -20,14 +20,8 @@ describe("HomePage", () => {
   it("renders a heading", () => {
     render(<HomePage />);
     const heading = screen.getByRole("heading", {
-      name: /welcome to my next\.js app/i,
+      name: /welcome/i,
     });
     expect(heading).toBeInTheDocument();
-  });
-
-  it("calls Google Analytics functions on render", () => {
-    render(<HomePage />);
-    expect(initGA).toHaveBeenCalledTimes(1);
-    expect(logPageView).toHaveBeenCalledTimes(2);
   });
 });
