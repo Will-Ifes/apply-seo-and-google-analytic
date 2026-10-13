@@ -1,103 +1,58 @@
-# Meu Projeto Next.js
+# Produtos · SEO, Analytics e testes
 
-Este é um projeto de exemplo utilizando Next.js, configurado com diversas funcionalidades avançadas como integração com API, Google Analytics, Tailwind CSS, SEO otimizado, testes unitários e de integração, entre outros.
+Catálogo em Next.js e TypeScript com Fake Store API, Google Analytics 4 e testes.
 
-## Funcionalidades Principais
+## Contexto e objetivo
 
-- **Next.js**: Framework React para produção.
-- **Google Analytics**: Integração para monitoramento de tráfego e métricas do site.
-- **SEO**: Práticas de SEO para melhorar a visibilidade do site.
-- **HTML Semântico**: Utilização de tags semânticas para melhor acessibilidade e SEO.
-- **Tailwind CSS**: Biblioteca de utilitários CSS para estilização rápida e eficiente.
-- **Integração com API**: Comunicação com uma API externa para obtenção de dados.
-- **Testes**: Configuração de testes unitários e de integração usando Jest e Testing Library.
-- **ESLint**: Ferramenta de linting para garantir a qualidade do código.
-- **Variáveis de Ambiente**: Utilização de `.env.local` para armazenar variáveis sensíveis.
+Experimento de integração entre apresentação, dados, metadados e medição. Utiliza Tailwind, Jest e Testing Library.
 
-## Estrutura do Projeto
+## Funcionalidades presentes
 
-A estrutura do projeto é organizada da seguinte forma:
+- Consulta e apresentação de produtos.
+- Analytics configurado por variável de ambiente.
+- Testes unitários e de integração.
+- Metadados e preload de imagem.
 
-app
-├── tests
-│ ├── integration
-│ │ └── HomePageIntegration.test.tsx
-│ ├── unit
-│ │ └── HomePage.test.tsx
-├── components
-│ └── header
-├── lib
-│ └── analytics.ts
-├── mocks
-│ └── analytics.ts
-├── services
-│ └── api-service.ts
-├── styles
-│ └── globals.css
-├── page.tsx
-├── layout.tsx
-└── GoogleAnalytics.tsx
+## Por dentro do código
 
-## Tecnologias Utilizadas
+| Código | O que observar |
+| --- | --- |
+| [`app/service/api-service.ts`](app/service/api-service.ts) | Busca de produtos. |
+| [`app/lib/analytics.ts`](app/lib/analytics.ts) | Inicialização e pageview. |
+| [`app/layout.tsx`](app/layout.tsx) | Layout e metadados. |
+| [`app/__tests__/integration/HomePageIntegration.test.tsx`](app/__tests__/integration/HomePageIntegration.test.tsx) | Teste de integração. |
 
-- **Next.js**: Framework React para produção.
-- **React**: Biblioteca JavaScript para construir interfaces de usuário.
-- **TypeScript**: Superset de JavaScript que adiciona tipagem estática.
-- **Tailwind CSS**: Biblioteca de utilitários CSS para estilização.
-- **Jest**: Framework de testes para JavaScript.
-- **Testing Library**: Conjunto de utilitários para testes de interfaces de usuário.
-- **ESLint**: Ferramenta de linting para garantir a qualidade do código.
+## Executar localmente
 
-## Configurações Importantes
+Requer Node.js e npm compatíveis com as dependências versionadas.
 
-### Google Analytics
-
-A integração com o Google Analytics é feita através do componente `GoogleAnalytics.tsx` e do arquivo de configuração `analytics.ts` em `lib`.
-
-### SEO
-
-Tags meta e outras práticas de SEO são aplicadas no arquivo `layout.tsx`.
-
-### Tailwind CSS
-
-O Tailwind CSS é configurado em `tailwind.config.js` e os estilos globais são importados em `styles/globals.css`.
-
-### Integração com API
-
-A comunicação com a API externa é feita através do serviço `api-service.ts` em `services`.
-
-### Testes
-
-Os testes unitários e de integração são configurados usando Jest e Testing Library. Os testes podem ser encontrados em `__tests__/unit` e `__tests__/integration`.
-
-#### Comando para Rodar os Testes
-
-Para rodar os testes, utilize o comando:
-
-```sh
-npm run test
-
+```bash
+git clone https://github.com/Will-Ifes/apply-seo-and-google-analytic.git
+cd apply-seo-and-google-analytic
 npm install
-
 npm run dev
 ```
 
-# Coisas que Estou Aprendendo
+Abra o endereço informado pelo servidor no terminal.
 
-## Este projeto é parte do meu aprendizado sobre:
+Para medir navegação, configure `NEXT_PUBLIC_GA_ID` em `.env.local` com a sua propriedade de testes.
 
-- Desenvolvimento de aplicações web modernas com Next.js.
-- Melhores práticas de SEO e acessibilidade.
-- Estilização eficiente com Tailwind CSS.
-- Integração de serviços externos como Google Analytics.
-- Escrever testes unitários e de integração eficazes.
-- Manter a qualidade do código com ESLint.
-- Utilização de variáveis de ambiente para configurações sensíveis.
-- Contribuição
-- Se você tiver sugestões ou melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+## Comandos disponíveis
 
-# Licença
+| Comando | Script versionado |
+| --- | --- |
+| `npm run dev` | `next dev` |
+| `npm run build` | `next build` |
+| `npm start` | `next start` |
+| `npm run lint` | `next lint` |
+| `npm test` | `jest` |
 
-## Este projeto está licenciado sob a MIT License.
+Os comandos refletem o `package.json`. A existência de um script não comprova execução bem-sucedida no ambiente atual.
 
-Este `README.md` deve fornecer uma visão clara e detalhada do seu projeto, destacando as tecnologias utilizadas e as configurações importantes. Ele também serve como um ótimo ponto de referência para qualquer pessoa que queira entender ou contribuir para o seu projeto.
+## Escopo e evolução
+
+Os metadados ainda têm textos genéricos. A configuração não comprova indexação ou ganho de tráfego. Revisar metadados por página, consentimento e carregamento são próximos passos.
+
+---
+
+Mantido por **Will Oliveira** · [Perfil](https://github.com/Will-Ifes) · [LinkedIn](https://www.linkedin.com/in/wildemberg-de-jesus-oliveira/)
