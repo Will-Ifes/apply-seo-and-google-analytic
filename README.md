@@ -2,18 +2,19 @@
 
 Catálogo em Next.js e TypeScript com Fake Store API, Google Analytics 4 e testes.
 
-## Contexto e objetivo
-
 Experimento de integração entre apresentação, dados, metadados e medição. Utiliza Tailwind, Jest e Testing Library.
 
-## Funcionalidades presentes
+## Destaques
 
 - Consulta e apresentação de produtos.
 - Analytics configurado por variável de ambiente.
 - Testes unitários e de integração.
 - Metadados e preload de imagem.
 
-## Por dentro do código
+<details>
+<summary><strong>Organização e código</strong></summary>
+
+### Por dentro do código
 
 | Código | O que observar |
 | --- | --- |
@@ -22,7 +23,12 @@ Experimento de integração entre apresentação, dados, metadados e medição. 
 | [`app/layout.tsx`](app/layout.tsx) | Layout e metadados. |
 | [`app/__tests__/integration/HomePageIntegration.test.tsx`](app/__tests__/integration/HomePageIntegration.test.tsx) | Teste de integração. |
 
-## Executar localmente
+</details>
+
+<details>
+<summary><strong>Executar e consultar</strong></summary>
+
+### Executar localmente
 
 Requer Node.js e npm compatíveis com as dependências versionadas.
 
@@ -37,7 +43,7 @@ Abra o endereço informado pelo servidor no terminal.
 
 Para medir navegação, configure `NEXT_PUBLIC_GA_ID` em `.env.local` com a sua propriedade de testes.
 
-## Comandos disponíveis
+### Comandos disponíveis
 
 | Comando | Script versionado |
 | --- | --- |
@@ -47,11 +53,14 @@ Para medir navegação, configure `NEXT_PUBLIC_GA_ID` em `.env.local` com a sua 
 | `npm run lint` | `next lint` |
 | `npm test` | `jest` |
 
-Os comandos refletem o `package.json`. A existência de um script não comprova execução bem-sucedida no ambiente atual.
+</details>
 
-## Escopo e evolução
+<details>
+<summary>Escopo e referências</summary>
 
 Os metadados ainda têm textos genéricos. A configuração não comprova indexação ou ganho de tráfego. Revisar metadados por página, consentimento e carregamento são próximos passos.
+
+</details>
 
 ---
 
