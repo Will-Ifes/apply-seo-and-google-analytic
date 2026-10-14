@@ -1,8 +1,19 @@
+<p align="center">
+  <img src="./.github/readme-cover.svg" alt="Discoverable Products: Catálogo, metadados e medição de navegação." width="100%" />
+</p>
+
 # Produtos · SEO, Analytics e testes
 
 Catálogo em Next.js e TypeScript com Fake Store API, Google Analytics 4 e testes.
 
 Experimento de integração entre apresentação, dados, metadados e medição. Utiliza Tailwind, Jest e Testing Library.
+
+## Explore o diferencial
+
+| Ponto de entrada | O que observar |
+| --- | --- |
+| [Interface sob teste](app/__tests__/integration/HomePageIntegration.test.tsx) | O teste de integração documenta expectativas sobre a página de produtos. |
+| [Medição explícita](app/lib/analytics.ts) | A camada de analytics organiza a inicialização e os eventos de navegação. |
 
 ## Destaques
 
